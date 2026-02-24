@@ -11,11 +11,25 @@ while (time >0) {
 }
 console.log("Đã hết thời gian!")*/
 
-const numOforder = 5
+/**const numOforder = 5
 let total = 0 
 for (let i = 1; i <= numOforder; i++) {
     const price = Math.floor(Math.random() * (5_000_000 - 1_000_000 + 1)) + 1_000_000
     total += price
     console.log(`Đơn hàng ${i}: ${price.toLocaleString()} VND`)
 }
-console.log(`Tổng tiền phải trả: ${total.toLocaleString()} VND`)
+console.log(`Tổng tiền phải trả: ${total.toLocaleString()} VND`)*/
+
+let price = Math.floor(Math.random() * (5_000_000 - 1_00_000 + 1)) + 1_00_000
+let hasDiscount = Math.round(Math.random())
+if (hasDiscount ===1) {
+    let discountPercent = Math.floor(Math.random() * (50 - 10 +1)) +10
+    let discountAmount = price - discountPercent / 100
+    let finalPrice = price - discountAmount
+    console.log(`Gía gốc: ${price}`)
+    console.log(`Giảm giá: ${discountPercent}%`)
+    console.log(`Giá sau khi giảm: ${finalPrice.toLocaleString()} VND`)
+} else {
+    console.log(`Gia goc: ${price.toLocaleString()} VND`)
+    console.log("Không có giảm giá!")
+}

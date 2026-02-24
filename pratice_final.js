@@ -1,9 +1,8 @@
-let totaltime = 30
-let time = totaltime
+let time = 50
+let halfTime = time / 2
 while (time >0) {
-    let elapsed = totaltime - time
-    
-    if (elapsed === time) {
+
+    if (time === halfTime) {
         console.log("Đã qua nửa thời gian!")
     } else {
         console.log(`Còn ${time} giây nữa!`)

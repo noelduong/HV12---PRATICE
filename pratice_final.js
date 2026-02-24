@@ -1,5 +1,5 @@
-let time = 30
-let halfTime = time / 2
+let time = 31
+const halfTime = Math.floor(time / 2)
 while (time >0) {
 
     if (time === halfTime) {

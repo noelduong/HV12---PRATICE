@@ -1,4 +1,4 @@
-let time = 50
+let time = 30
 let halfTime = time / 2
 while (time >0) {
 

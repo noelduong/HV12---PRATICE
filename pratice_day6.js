@@ -38,7 +38,7 @@ myFunc()*/
 /**const myFunc = (a, b) => (a + b);
 console.log(myFunc(4, 5));*/
 
-const caculator = (number1, number2, operator) => {
+/**const caculator = (number1, number2, operator) => {
     if (operator === "+") {
         return number1 + number2;
     } else if (operator === "-") {
@@ -50,6 +50,23 @@ const caculator = (number1, number2, operator) => {
     } else { 
         return "Invalid operator";
     }
+    }
+    console.log(caculator(2, 4, "*"));
+    console.log(caculator(2, 1, "/"))*/
+
+    const caculator = (number1, number2, operator) => {
+        switch (operator) {
+            case "+":
+                return number1 + number2;
+                case "-":
+                    return number1 - number2;
+                    case "*":
+                        return number1 * number2;
+                        case "/":
+                            return number1 / number2;
+                            default:
+                                return "Invalid operator";
+        }
     }
     console.log(caculator(2, 4, "*"));
     console.log(caculator(2, 1, "/"))

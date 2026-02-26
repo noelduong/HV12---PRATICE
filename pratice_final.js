@@ -51,9 +51,3 @@ console.log(`Giá gốc: ${n.toLocaleString()} VNĐ`)
 console.log(` Giảm giá: ${disCount}%`)
 console.log(` Giá sau khi giảm: ${finalPrice.toLocaleString()} VNĐ`)*/
 
-function printName(name) {
-    console.log(`Hello ${name}`)
-}
-printName("Thầy Sang")
-printName("Khang")
-printName("Thư")

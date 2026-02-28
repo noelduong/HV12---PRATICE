@@ -44,6 +44,6 @@ console.log(carts);*/
 const friends = [ "An", "Jena", "Dương"]
 friends.push("Hùng")
 console.log(`Total number of friends ${friends.length}`);
-console.log(`First friend: ${friends [0]}`);
+console.log(`First friend: ${friends[0]}`);
 
 

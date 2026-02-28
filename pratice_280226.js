@@ -47,7 +47,7 @@ console.log(`Total number of friends ${friends.length}`);
 console.log(`First friend: ${friends[0]}`);
 friends.unshift("Mai")
 friends.pop()
-friends.splice(1, 1, "Trang")
+friends.splice(2, 1, "Trang")
 for (let i = 0; i < friends.length; i++) {
     console.log(friends[i]);
 }

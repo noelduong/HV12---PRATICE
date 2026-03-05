@@ -205,8 +205,21 @@ const employee = [
     salary: 1150,
   },
 ];
-const employeeNonePhoneNum = employee.filter((employees) => {
+/**câu 1 */
+const employeeNoPhone = employee.filter((employees) => {
     return employees.phoneNumber === null 
-}
+} 
 )
-console.log(employeeNonePhoneNum)
+console.log(employeeNoPhone)
+/**câu 2 */
+
+const employeeNoMail = employee.filter((employees) => {
+    return employees.email === null
+})
+console.log(employeeNoMail)
+
+/**câu 3 */
+const noContact = employee.filter((employees) => {
+    return employees.email === null && employee.phoneNumber === null
+} )
+console.log(noContact)

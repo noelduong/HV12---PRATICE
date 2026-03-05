@@ -1,6 +1,6 @@
 /**
-*object => Chứa key & value
-* */
+ *object => Chứa key & value
+ * */
 /**let sst = 1;
 const employees = [
     {id: 1,
@@ -207,40 +207,46 @@ const employee = [
 ];
 /**câu 1 */
 const employeeNoPhone = employee.filter((employees) => {
-    return employees.phoneNumber === null 
-} 
-)
-console.log(`Danh sách NV không SĐT: ${employeeNoPhone}`)
+  return employees.phoneNumber === null;
+});
+console.log(`Danh sách NV không SĐT: ${employeeNoPhone}`);
 /**câu 2 */
 
 const employeeNoMail = employee.filter((employees) => {
-    return employees.email === null
-})
-console.log(`Danh sách NV không email: ${employeeNoMail}`)
+  return employees.email === null;
+});
+console.log(`Danh sách NV không email: ${employeeNoMail}`);
 
 /**câu 3 */
 const noContact = employee.filter((employees) => {
-    const {phoneNumber, email} = employees
-    return !phoneNumber && !email
-} )
-console.log(noContact)
+  const { phoneNumber, email } = employees;
+  return !phoneNumber && !email;
+});
+console.log(noContact);
 
 /** câu 4 */
 const noContacts = employee.filter((employees) => {
-    const {phoneNumber, email} = employees
-    return !phoneNumber && !email
-})
-console.log(noContacts)
+  const { phoneNumber, email } = employees;
+  return !phoneNumber && !email;
+});
+console.log(noContacts);
 const generatedEmail = noContacts.map((employees) => {
-    return {employees, 
-        email: `${employees.id}_${employees.position}@gmail.com`
-    }
-})
-console.log(generatedEmail)
+  return {
+    ...employees,
+    email: `${employees.id}_${employees.position}@gmail.com`,
+  };
+});
+console.log(generatedEmail);
 
 /** Câu 5 */
-let total = 0
-employee.forEach(employees => {
-    total += employees.salary
-})
-console.log(total)
+let total = 0;
+employee.forEach((employees) => {
+  total += employees.salary;
+});
+console.log(total);
+
+const totalSalary = employee.reduce((sum, employees) => {
+  sum += employees.salary;
+  return sum;
+}, 0);
+console.log(totalSalary);

@@ -246,3 +246,10 @@ const generatedEmail = employee.map((employees) => {
   return employees;
 });
 console.log(generatedEmail);
+
+const totalSalary = employee.reduce((sum, employees) =>{
+  sum += employees.salary
+  return sum
+},0)
+console.log(totalSalary)
+

@@ -76,3 +76,20 @@ const updateMail = filterEmployees.map((employee) => {
     }
 )
 console.log(updateMail)
+
+/*const newInfo = employees
+    .filter(employee => employee.email || employee.phoneNumber)
+    .map(employee => {
+        const {id, position} = employee
+        return !employee.email
+        ? {...employee,
+            email: `${id}_${position.toLowerCase()}@gmail.com`
+        }
+        : employee
+    })
+console.log(newInfo)*/
+
+const averageSalary = updateMail.reduce((sum, employee) => {
+    return sum + employee.salary;
+},0) / updateMail.length
+console.log(averageSalary)

@@ -1,4 +1,4 @@
-const employee = [
+const employees = [
   {
     id: 1,
     name: "Nguyễn Văn A",
@@ -46,8 +46,14 @@ const employee = [
   },
 ];
 
-const employeeOffical = employee.filter((employees) => {
-    return employees.email !== null || employees.phoneNumber !== null;
+const employeesOffical = employees.filter((employee) => {
+    return employee.email || employee.phoneNumber
 }
 )
-console.log(employeeOffical)
+console.log(employeesOffical)
+
+const filterEmployees = employees.filter((employee) => {
+    const {email, phoneNumber} = employee
+    return email || phoneNumber
+})
+console.log(filterEmployees)

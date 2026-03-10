@@ -47,7 +47,7 @@ const employee = [
 ];
 
 const employeeOffical = employee.filter((employees) => {
-    return employee.email !== null || employee.phoneNumber !== null;
+    return employees.email !== null || employees.phoneNumber !== null;
 }
 )
 console.log(employeeOffical)

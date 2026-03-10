@@ -50,17 +50,16 @@ const employees = [
     return employee.email || employee.phoneNumber
 }
 )
-console.log(employeesOffical)
+console.log(employeesOffical)*/
 
 const filterEmployees = employees.filter((employee) => {
     const {email, phoneNumber, id} = employee
     return email || phoneNumber
 })
-console.log(filterEmployees)*/
 
-const newInfo = employees.map((employee) => {
+const newInfo = filterEmployees.map((employee) => {
     const {email, id, position} = employee;
-    if (email === null) {
+    if (!email) {
     return {...employee,
        email: `${id}_${position.toLowerCase()}@gmail.com`}
     }
